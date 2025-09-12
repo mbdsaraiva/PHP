@@ -31,8 +31,15 @@ class ApiConsumer
 
         if ($err) {
             echo "cURL Error #:" . $err;
+            die(0);
         } else {
-            echo $response;
+            return json_decode( $response, true);
         }
     }
+    public function get_all_contries(){
+
+        //get all countries data
+        return $this-> api('all')   ;
+    }
+
 }
