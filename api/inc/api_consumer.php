@@ -39,7 +39,11 @@ class ApiConsumer
     public function get_all_contries(){
 
         //get all countries data
-        return $this-> api('all')   ;
+        return $this-> api('all');
     }
 
+    public function get_country($country_name){
+
+        return $this-> api("name/$country_name");
+    }
 }
