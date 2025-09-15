@@ -1,10 +1,8 @@
 <?php 
 defined ('CONTROL') or die ("Acesso inválido!");
 $api = new ApiConsumer();
-// $countries = $api -> get_all_contries();
+$countries = $api->get_all_contries();
 
-// get a specific data
-$country = $api -> get_country('brazil') 
 ?>
 <!-- 
 <div class="conteiner mt-5">
@@ -16,9 +14,5 @@ $country = $api -> get_country('brazil')
 </div> -->
 
 <pre>
-
-<?php 
-//print_r($countries);
-print_r($country);
-?>
+    <?php print_r($countries)?>
 </pre>
